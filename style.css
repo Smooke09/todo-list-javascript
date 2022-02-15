@@ -103,7 +103,7 @@ body {
     font: inherit;
 }
 
-.todo__new-item > input{
+.todo__new-item > textarea{
     background-color: transparent;
     border: none;
     width: 80%;
@@ -111,9 +111,50 @@ body {
     font: inherit;
 }
 
-.todo__new-item > input::placeholder {
+.todo__new-item > textarea::placeholder {
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
     color: var(--secondary-color);
+}
+footer{
+    background-color: #0F0F0B;
+    justify-content: center;
+    position:fixed;
+	bottom:0;
+	width:100%;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 1020px) {
+    
+    
+    body{
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+        background-repeat: repeat-y;
+    }
+
+
+    .todo__title {
+        display: flex;
+        width: 100vw;
+        font-size: 2rem;
+    }
+
+    .todo__new-item {
+        width: 100vw;
+    }
+
+    .todo__list {
+        width: 200px;
+    }
+    
+    .todo__item div {
+        text-align: center;
+    }
 }
