@@ -20,12 +20,16 @@ html {
 
 body {
     position: relative;
-    height: 100%; 
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    height: 100vh; 
+    background-attachment: fixed;
+    background-image: linear-gradient(#0eae57 0%, #0c7475 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
 .todo {
+    height: 100%;
     display: flex;
     width: 50vw;
     flex-direction: column;
@@ -103,7 +107,7 @@ body {
     font: inherit;
 }
 
-.todo__new-item > textarea{
+.todo__new-item > input{
     background-color: transparent;
     border: none;
     width: 80%;
@@ -111,8 +115,8 @@ body {
     font: inherit;
 }
 
-.todo__new-item > textarea::placeholder {
-    font-size: 18px;
+.todo__new-item > input::placeholder {
+    font-size: 1.8rem;
     font-style: italic;
     font-weight: normal;
     color: var(--secondary-color);
@@ -131,15 +135,8 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 1020px) {
-    
-    
-    body{
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
-        background-repeat: repeat-y;
-    }
 
-
+@media (max-width: 1020px) { 
     .todo__title {
         display: flex;
         width: 100vw;
@@ -156,5 +153,8 @@ footer p {
     
     .todo__item div {
         text-align: center;
+    }
+
+    input::-webkit-input-placeholder {
     }
 }
